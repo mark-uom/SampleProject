@@ -46,9 +46,15 @@ public class TestLauncher {
 	}
 	
 	@Test
-	public void testProcessArgsWithMultipleArguments() {
+	public void testProcessArgsWithTwoArguments() {
 		launcher = new Launcher(null);
 		assertTrue(launcher.processArgs(new String[] {"ASDA","TESCO"}));
+	}
+	
+	@Test
+	public void testProcessArgsWithMultipleArguments() {
+		launcher = new Launcher(null);
+		assertTrue(launcher.processArgs(new String[] {"ASDA","TESCO", "SAINSBURYS"}));
 	}
 
 }
